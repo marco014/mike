@@ -30,7 +30,7 @@ public class UserService {
     }
 
     public UserModel update(@RequestBody UserModel userModel){
-        return update(userModel);
+          return userDao.update(userModel);
     }
 
     public void delete(@PathVariable long id){

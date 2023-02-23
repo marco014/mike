@@ -14,7 +14,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/getUserAll")
+    @GetMapping("/getAll")
     List<UserModel> getAllUser(){
         return userService.getAll();
     }
@@ -31,14 +31,13 @@ public class UserController {
 
 
 
-    @PutMapping(value = "/{id}")
+    @PutMapping(value = "/update/{id}")
      UserModel updateUserById(@RequestBody UserModel userModel ){
         return userService.update(userModel);
     }
 
-    @DeleteMapping(value = "/{id}")
+    @DeleteMapping(value = "/delete/{id}")
     void  deleteUserById(@PathVariable("id") long id){
-
         userService.delete(id);
     }
 }
