@@ -1,15 +1,19 @@
 package com.basedatos.basededatos.models;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 @Entity
 @Table(schema = "user")
 public class UserModel {
     @Id
-    @Column(name = "id_user",updatable = false, nullable = false,  unique = true)
+    @Column(name = "id",updatable = false, nullable = false,  unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(name = "last_name")
     private String lastName;
+
+    @Column(name = "first_name")
+    private String firstName;
+
 
     public long getId() {
         return id;
@@ -35,18 +39,7 @@ public class UserModel {
         this.firstName = firstName;
     }
 
-    public Boolean getStatus() {
-        return status;
-    }
 
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
 
-    @Column(name = "first_name")
-    private String firstName;
-
-    @Column(name = "status")
-    private Boolean status;
 
 }

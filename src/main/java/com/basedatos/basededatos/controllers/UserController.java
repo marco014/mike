@@ -5,17 +5,16 @@ import com.basedatos.basededatos.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
-@RequestMapping(name = "/user")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
     UserService userService;
-    @GetMapping(value = "/getAll")
+
+    @GetMapping("/getUserAll")
     List<UserModel> getAllUser(){
         return userService.getAll();
     }
@@ -27,7 +26,7 @@ public class UserController {
 
     @PostMapping(value = "/create")
      UserModel createUser(@RequestBody UserModel userModel){
-    return userService.register(userModel);
+     return userService.register(userModel);
     }
 
 
