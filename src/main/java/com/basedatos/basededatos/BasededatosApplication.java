@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.basedatos.basededatos.dao.UserDao"})
 @ComponentScan(basePackages = {"com.basedatos.basededatos.controllers.UserController"})
+
 public class BasededatosApplication {
 
 	public static void main(String[] args) {
