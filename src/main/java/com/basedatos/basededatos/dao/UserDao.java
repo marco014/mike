@@ -1,9 +1,6 @@
 package com.basedatos.basededatos.dao;
 import com.basedatos.basededatos.models.UserModel;
-
-
 import java.util.List;
-
 
 public interface UserDao {
 
