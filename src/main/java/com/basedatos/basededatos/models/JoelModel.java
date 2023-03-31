@@ -1,9 +1,10 @@
 package com.basedatos.basededatos.models;
 
 import jakarta.persistence.*;
+
 @Entity
-@Table(schema = "user")
-public class UserModel {
+@Table(schema = "joel")
+public class JoelModel {
     @Id
     @Column(name = "id",updatable = false, nullable = false,  unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,6 +38,6 @@ public class UserModel {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-    }
-    
+    };
+
 }
